@@ -1,0 +1,83 @@
+package cn.police.police.announcement;
+
+import android.content.Intent;
+import android.graphics.Color;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
+import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import cn.police.police.R;
+import cn.police.police.announcement.activity.Alarm110Activity;
+import cn.police.police.utils.BadgeView;
+
+/*2016/4/25,lhp*/
+
+/**
+ * 通知公告主界面
+ */
+public class NoticeAnnouncementActivity extends AppCompatActivity implements View.OnClickListener{
+
+    private TextView title;//标题
+    private TextView tv_daypush;//每日推送
+    private LinearLayout head_back;//返回
+    private LinearLayout noticeanno_110alarm_ll;//转到110接处警界面
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        setContentView(R.layout.activity_notice_announcement);
+        initview();
+        setclick();
+
+
+    }
+
+    public void initview(){
+        tv_daypush = (TextView) findViewById(R.id.tv_daypush);//每日推送
+        daypushnotice();
+
+        title = (TextView) findViewById(R.id.tv_noticetitle);
+//        title.getPaint().setFakeBoldText(true);//标题加粗
+        head_back = (LinearLayout) findViewById(R.id.head_back);//返回
+        noticeanno_110alarm_ll = (LinearLayout) findViewById(R.id.noticeanno_110alarm_ll);
+
+
+    }
+
+    public void setclick(){
+        head_back.setOnClickListener(this);
+        noticeanno_110alarm_ll.setOnClickListener(this);
+    }
+
+    /*给组件设置提示信息样式并显示*/
+    public void daypushnotice(){
+        BadgeView badgeView_daypush = new BadgeView(this,tv_daypush);
+        badgeView_daypush.setText("10");
+        badgeView_daypush.setBadgePosition(BadgeView.POSITION_TOP_RIGHT);
+        badgeView_daypush.setTextColor(Color.WHITE);
+        badgeView_daypush.setBadgeBackgroundColor(Color.RED);
+        badgeView_daypush.setTextSize(10);
+        badgeView_daypush.toggle();
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.head_back:
+                finish();
+                break;
+            case R.id.noticeanno_110alarm_ll:
+                startActivity(new Intent(NoticeAnnouncementActivity.this,Alarm110Activity.class));
+                break;
+            case R.id.tv_daypush:
+
+                break;
+        }
+    }
+}
