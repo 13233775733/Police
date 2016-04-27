@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
@@ -17,6 +18,7 @@ import android.widget.TextView;
 import cn.police.police.R;
 import cn.police.police.announcement.activity.Alarm110Activity;
 import cn.police.police.utils.BadgeView;
+import cn.police.police.utils.URLStringUtil;
 
 /*2016/4/25,lhp*/
 
@@ -81,14 +83,16 @@ public class NoticeAnnouncementActivity extends AppCompatActivity implements Vie
                 break;
         }
     }
-
+    /**请求后台获取每日或每周推送信息*/
     public void requestmessage(){
-
+        String noticebaseUrl = URLStringUtil.getnoticeBaseUrl();
 
     }
 
 
-
+    /**
+     * 显示每日推送子项ListView的Adapter
+     */
     public class NoticeDayPushAdapter extends BaseAdapter{
         Context context;
 
@@ -109,9 +113,25 @@ public class NoticeAnnouncementActivity extends AppCompatActivity implements Vie
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
-            return null;
+            ViewHolder viewHolder ;
+            if(convertView == null){
+                viewHolder = new ViewHolder();
+                convertView = LayoutInflater.from(context).inflate(R.layout.listview_notice_daypush_item,null);
+                viewHolder.tv_daypush_itemtitle = (TextView) convertView.findViewById(R.id.tv_daypush_itemtitle);
+                convertView.setTag(viewHolder);
+            }else {
+                viewHolder = (ViewHolder) convertView.getTag();
+            }
+
+//            viewHolder.tv_daypush_itemtitle.setText();
+
+
+            return convertView;
         }
     }
 
+    public class ViewHolder{
+        private TextView tv_daypush_itemtitle;//每日推送子项的title
+    }
 
 }
