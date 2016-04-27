@@ -2,23 +2,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="cn.police.police.page.PoliceFramgent">
+    android:background="@color/gray"
+    tools:context="cn.police.police.page.PoliceFramgent" >
 
 
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:orientation="vertical">
+        android:orientation="vertical" >
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_marginTop="10dp"
-            >
+            android:background="@color/white"
+            android:gravity="center" >
+            <!--android:layout_marginTop="10dp"-->
 
             <TextView
                 android:layout_width="100dp"
@@ -37,52 +38,641 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="30dp"
-            android:orientation="horizontal"
-            android:layout_marginTop="10dp"
-            >
+            android:background="@color/white"
+            android:orientation="horizontal">
             <TextView
                 android:layout_width="100dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:gravity="center"
-                android:layout_marginTop="5dp"
                 android:text="选择编号:"
-                android:layout_marginLeft="10dp"
-                android:textSize="20dp"/>
+                android:textSize="18sp"/>
 
             <Spinner
                 android:id="@+id/spinner1"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
-                />
+                android:gravity="center"
+                android:scrollbars="none" />
 
             <TextView
                 android:layout_width="140dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="选择全部提审室:"
-                android:textSize="20dp"
-                android:layout_marginTop="5dp"
-                />
-                <CheckBox
-                    android:layout_width="30dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="3dp"
-                    />
+                android:textSize="18sp"
+                android:text="选择全部提审室:" />
+            <CheckBox
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="3dp" />
 
         </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="30dp"
+            android:background="@color/white"
+            android:layout_marginTop="1dp"
             android:text=""
             />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_margin="1dp"
+            android:background="@color/white"
+            android:orientation="horizontal">
 
-        <FrameLayout
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
+            <LinearLayout
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-        </FrameLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:background="@color/white"
+                    android:text=""/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:background="@color/white"
+                    android:textSize="16sp"
+                    android:text="00:00"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:background="@color/white"
+                    android:textSize="16sp"
+                    android:text="04:00"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:background="@color/white"
+                    android:textSize="16sp"
+                    android:text="08:00"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:background="@color/white"
+                    android:textSize="16sp"
+                    android:text="12:00"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:background="@color/white"
+                    android:textSize="16sp"
+                    android:text="16:00"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:background="@color/white"
+                    android:textSize="16sp"
+                    android:text="20:00"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:background="@color/white"
+                    android:textSize="16sp"
+                    android:text="24:00"/>
+            </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1dp"
+                        android:gravity="center"
+                        android:background="@color/white"
+                        android:textSize="16sp"
+                        android:text="周一"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1dp"
+                        android:gravity="center"
+                        android:background="@color/white"
+                        android:textSize="16sp"
+                        android:text="周二"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1dp"
+                        android:gravity="center"
+                        android:background="@color/white"
+                        android:textSize="16sp"
+                        android:text="周三"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1dp"
+                        android:gravity="center"
+                        android:background="@color/white"
+                        android:textSize="16sp"
+                        android:text="周四"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1dp"
+                        android:gravity="center"
+                        android:background="@color/white"
+                        android:textSize="16sp"
+                        android:text="周五"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1dp"
+                        android:gravity="center"
+                        android:background="@color/white"
+                        android:textSize="16sp"
+                        android:text="周六"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1dp"
+                        android:gravity="center"
+                        android:background="@color/white"
+                        android:textSize="16sp"
+                        android:text="周日"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="1dp"
+                    android:background="@color/gray"
+                    android:orientation="horizontal">
+                    <ListView
+                        android:id="@+id/table_listview"
+                        android:layout_width="match_parent"
+                        android:layout_height="305dp"
+                        android:background="@color/white"
+                        android:scrollbars="none"
+                        >
+                    </ListView>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--<ScrollView-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@drawable/background"-->
+        <!--android:visibility="gone"-->
+        <!-->-->
+        <!--<HorizontalScrollView-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:scrollbars="none"-->
+        <!-->-->
+        <!--<LinearLayout-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="vertical">-->
+
+        <!--<LinearLayout-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<TextView-->
+        <!--android:layout_width="40dp"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:background="#00000000"-->
+        <!--android:padding="5dp"-->
+        <!--android:textColor="#00000000"-->
+        <!--android:textSize="15sp"-->
+        <!--android:gravity="center"-->
+        <!--android:text=" "-->
+        <!--/>-->
+        <!--<TextView-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="1dp"-->
+        <!--android:layout_marginRight="1dp"-->
+        <!--android:background="#6699ff"-->
+        <!--android:padding="5dp"-->
+        <!--android:textColor="#ffffff"-->
+        <!--android:textSize="15sp"-->
+        <!--android:gravity="center"-->
+        <!--android:text="00:00-04:00"-->
+        <!--/>-->
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="fill_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="2dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;/>&ndash;&gt;-->
+        <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+        <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
+
+        <!--&lt;!&ndash;android:layout_width="100dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:paddingTop="5dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:paddingBottom="5dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:paddingLeft="3dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:paddingRight="3dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:orientation="vertical">&ndash;&gt;-->
+        <!--<TextView-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="1dp"-->
+        <!--android:layout_marginRight="1dp"-->
+        <!--android:background="#6699ff"-->
+        <!--android:padding="5dp"-->
+        <!--android:textColor="#ffffff"-->
+        <!--android:textSize="15sp"-->
+        <!--android:gravity="center"-->
+        <!--android:text="04:00-08:00"-->
+        <!--/>-->
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="fill_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="2dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;/>&ndash;&gt;-->
+        <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+        <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
+
+        <!--&lt;!&ndash;android:layout_width="100dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:paddingTop="5dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:paddingBottom="5dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:paddingLeft="3dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:paddingRight="3dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:orientation="vertical">&ndash;&gt;-->
+        <!--<TextView-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="1dp"-->
+        <!--android:layout_marginRight="1dp"-->
+        <!--android:background="#6699ff"-->
+        <!--android:padding="5dp"-->
+        <!--android:textColor="#ffffff"-->
+        <!--android:textSize="15sp"-->
+        <!--android:gravity="center"-->
+        <!--android:text="08:00-12:00"-->
+        <!--/>-->
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="fill_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="2dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;/>&ndash;&gt;-->
+        <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+        <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
+
+        <!--&lt;!&ndash;android:layout_width="100dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:paddingTop="5dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:paddingBottom="5dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:paddingLeft="3dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:paddingRight="3dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:orientation="vertical">&ndash;&gt;-->
+        <!--<TextView-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="1dp"-->
+        <!--android:layout_marginRight="1dp"-->
+        <!--android:background="#6699ff"-->
+        <!--android:padding="5dp"-->
+        <!--android:textColor="#ffffff"-->
+        <!--android:textSize="15sp"-->
+        <!--android:gravity="center"-->
+        <!--android:text="12:00-16:00"-->
+        <!--/>-->
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="fill_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="2dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;/>&ndash;&gt;-->
+        <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+        <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
+
+        <!--&lt;!&ndash;android:layout_width="100dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:paddingTop="5dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:paddingBottom="5dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:paddingLeft="3dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:paddingRight="3dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:orientation="vertical">&ndash;&gt;-->
+        <!--<TextView-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="1dp"-->
+        <!--android:layout_marginRight="1dp"-->
+        <!--android:background="#6699ff"-->
+        <!--android:padding="5dp"-->
+        <!--android:textColor="#ffffff"-->
+        <!--android:textSize="15sp"-->
+        <!--android:gravity="center"-->
+        <!--android:text="16:00-20:00"-->
+        <!--/>-->
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="fill_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="2dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;/>&ndash;&gt;-->
+        <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+        <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
+
+        <!--&lt;!&ndash;android:layout_width="100dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:paddingTop="5dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:paddingBottom="5dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:paddingLeft="3dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:paddingRight="3dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:orientation="vertical">&ndash;&gt;-->
+        <!--<TextView-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="1dp"-->
+        <!--android:layout_marginRight="1dp"-->
+        <!--android:background="#6699ff"-->
+        <!--android:padding="5dp"-->
+        <!--android:textColor="#ffffff"-->
+        <!--android:textSize="15sp"-->
+        <!--android:gravity="center"-->
+        <!--android:text="20:00-24:00"-->
+        <!--/>-->
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="fill_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="2dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;/>&ndash;&gt;-->
+        <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+        <!--android:layout_width="40dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:paddingTop="5dp"-->
+        <!--android:paddingBottom="5dp"-->
+        <!--android:paddingLeft="3dp"-->
+        <!--android:paddingRight="3dp"-->
+        <!--android:orientation="vertical">-->
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="fill_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:background="#00000000"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:padding="5dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textColor="#00000000"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textSize="15sp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:gravity="center"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:text=" "&ndash;&gt;-->
+        <!--&lt;!&ndash;/>&ndash;&gt;-->
+        <!--<LinearLayout-->
+        <!--android:id="@+id/ll1"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal">-->
+        <!--<TextView-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:textColor="#666666"-->
+        <!--android:gravity="center"-->
+        <!--android:textSize="15sp"-->
+        <!--android:text="周一"/>-->
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+        <!--android:id="@+id/ll2"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal">-->
+        <!--<TextView-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:textColor="#666666"-->
+        <!--android:gravity="center"-->
+        <!--android:textSize="15sp"-->
+        <!--android:text="周二"/>-->
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+        <!--android:id="@+id/ll3"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal">-->
+        <!--<TextView-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:textColor="#666666"-->
+        <!--android:gravity="center"-->
+        <!--android:textSize="15sp"-->
+        <!--android:text="周三"/>-->
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+        <!--android:id="@+id/ll4"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal">-->
+        <!--<TextView-->
+
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:textColor="#666666"-->
+        <!--android:textSize="15sp"-->
+        <!--android:gravity="center"-->
+        <!--android:text="周四"/>-->
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+        <!--android:id="@+id/ll5"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal">-->
+        <!--<TextView-->
+
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:textColor="#666666"-->
+        <!--android:textSize="15sp"-->
+        <!--android:gravity="center"-->
+        <!--android:text="周五"/>-->
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+        <!--android:id="@+id/ll6"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal">-->
+        <!--<TextView-->
+
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:textColor="#666666"-->
+        <!--android:textSize="15sp"-->
+        <!--android:gravity="center"-->
+        <!--android:text="周六"/>-->
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+        <!--android:id="@+id/ll7"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal">-->
+        <!--<TextView-->
+
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:textColor="#666666"-->
+        <!--android:textSize="15sp"-->
+        <!--android:gravity="center"-->
+        <!--android:text="周日"/>-->
+        <!--</LinearLayout>-->
+
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="fill_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="50dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textColor="#666666"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textSize="12sp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:gravity="center"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:text="8"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="fill_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="50dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textColor="#666666"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textSize="12sp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:gravity="center"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:text="9"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="fill_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="50dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textColor="#666666"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textSize="12sp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:gravity="center"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:text="10"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="fill_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="50dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textColor="#666666"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textSize="12sp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:gravity="center"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:text="11"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="fill_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="50dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textColor="#666666"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textSize="12sp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:gravity="center"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:text="12"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="fill_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="50dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textColor="#666666"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textSize="12sp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:gravity="center"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:text="13"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="fill_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="50dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textColor="#666666"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textSize="12sp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:gravity="center"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:text="14"/>&ndash;&gt;-->
+        <!--</LinearLayout>-->
+        <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
+
+        <!--&lt;!&ndash;android:layout_width="100dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:paddingTop="5dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:paddingBottom="5dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:paddingLeft="3dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:paddingRight="3dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:orientation="vertical">&ndash;&gt;-->
+
+
+
+        <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
+        <!--&lt;!&ndash;android:id="@+id/ll7"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="100dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:paddingTop="5dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:paddingBottom="5dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:paddingLeft="3dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:paddingRight="3dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:orientation="vertical">&ndash;&gt;-->
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="fill_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:background="#6699ff"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textColor="#ffffff"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:padding="5dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textSize="15sp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:gravity="center"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:text="SUN"&ndash;&gt;-->
+        <!--&lt;!&ndash;/>&ndash;&gt;-->
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="fill_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="2dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;/>&ndash;&gt;-->
+        <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+        <!--</LinearLayout>-->
+        <!--</HorizontalScrollView>-->
+
+        <!--</ScrollView>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+
+            android:gravity="center"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/status_red"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="有预约"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/status_green"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="正在使用"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/status_green"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="没有预约"/>
+
+        </LinearLayout>
     </LinearLayout>
 
 

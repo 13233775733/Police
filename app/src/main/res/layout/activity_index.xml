@@ -3,7 +3,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/white">
-<include layout="@layout/header"/>
+     <include layout="@layout/header"/>
 
        <com.astuetz.PagerSlidingTabStrip
         android:id="@+id/tabstrip"
