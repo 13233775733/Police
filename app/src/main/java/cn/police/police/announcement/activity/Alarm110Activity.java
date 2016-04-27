@@ -45,7 +45,7 @@ public class Alarm110Activity extends AppCompatActivity implements View.OnClickL
         list = new ArrayList<>();
         for(int i=0;i<10;i++){
             maplist = new HashMap<>();
-            maplist.put("casename","城南盗窃案0123456789有没有跑马灯的效果呀_"+i);
+            maplist.put("casename","城南盗窃案_"+i);
             maplist.put("casehand","薛岳_"+i+"\t||\t"+"综合勤务室_"+i);
             maplist.put("casedate","2016.04.20_"+i);
             maplist.put("casedescribe", "张三盗窃刘寡妇家二个鸡蛋,一个番茄还有一根葱一个土豆等张三盗窃刘寡妇家二个鸡蛋,一个番茄还有一根葱一个土豆等张三盗窃刘寡妇家二个鸡蛋,一个番茄还有一根葱一个土豆等张三盗窃刘寡妇家二个鸡蛋,一个番茄还有一根葱一个土豆等张三盗窃刘寡妇家二个鸡蛋,一个番茄还有一根葱一个土豆等张三盗窃刘寡妇家二个鸡蛋,一个番茄还有一根葱一个土豆等");

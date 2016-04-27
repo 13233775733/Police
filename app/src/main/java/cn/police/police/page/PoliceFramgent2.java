@@ -72,6 +72,10 @@ public class PoliceFramgent2 extends Fragment {
         ListView listview = (ListView) view.findViewById(R.id.numtable_listview);
         listview.setAdapter(new NumTableListViewAdapter(this.getActivity(),list));
 
+        View listItem = new NumTableListViewAdapter(this.getActivity(),list).getView(0, null, listview);
+        listItem.measure(0, 0);
+        listview.getLayoutParams().height = (listItem.getMeasuredHeight()+listview.getDividerHeight()) * 6;
+
 
 //        adapter = new ArrayAdapter<String>(getActivity(),android.R.layout.simple_spinner_item,m);
 //        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);

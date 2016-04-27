@@ -30,6 +30,4 @@ dependencies {
     compile project(':pullrefresh')
     compile project(':pullrefresh')
     compile files('libs/android-viewbadger.jar')
-    compile 'com.android.support:appcompat-v7:21.0.0'
-    compile 'com.android.support:support-v4:21.0.0'
 }
